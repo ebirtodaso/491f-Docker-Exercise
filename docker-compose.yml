@@ -1,11 +1,11 @@
-version: '3'
+version: '4'
 services:
-  web-server:
+  web:
     image: nginx:1.17.1
     ports:
       - "8080:80"
 
-  app-server:
-    image: tomcat:9.0.12
+  app:
+    build: .
     ports:
-      - "8888:8080"
+      - "8081:8080"
